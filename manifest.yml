@@ -1,0 +1,4 @@
+applications:
+- name: ibmGo_api
+  host: gogo-ibm
+  memory: 128M
