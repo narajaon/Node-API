@@ -10,9 +10,9 @@ router.post('/', function (req, res) {
 	};
 
 	db.dbPerfomQuerry(db.dbInsertOneElem, toAdd).then((val) => {
-		res.send(val);
+		res.status(201).send(val);
 	}).catch((e) => {
-		throw new Error(e);
+		res.status(500).send(e);
 	});
 });
 
@@ -24,9 +24,9 @@ router.delete('/', function (req, res) {
 	};
 
 	db.dbPerfomQuerry(db.dbDeleteOneElem, toAdd).then((val) => {
-		res.send(val);
+		res.status(200).send(val);
 	}).catch((e) => {
-		throw new Error(e);
+		res.status(500).send(e);
 	});
 });
 
@@ -38,9 +38,9 @@ router.get('/', function (req, res) {
 	};
 
 	db.dbPerfomQuerry(db.dbGetElem, toAdd).then((val) => {
-		res.send(val);
+		res.status(200).send(val);
 	}).catch((e) => {
-		throw new Error(e);
+		res.status(500).send(e);
 	});
 }); 
 

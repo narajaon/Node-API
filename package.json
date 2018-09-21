@@ -25,5 +25,8 @@
     "express": "^4.16.3",
     "mongodb": "^3.1.6",
     "npm": "^6.4.1"
+  },
+  "devDependencies": {
+    "eslint-config-strongloop": "^2.1.0"
   }
 }

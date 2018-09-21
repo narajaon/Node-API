@@ -27,7 +27,6 @@ const dbDeleteOneElem = function (db, toAdd) {
 const dbGetOneElem = function (db, toGet) {
 	return new Promise((resolve, reject) => {
 		db.collection(toGet.collectionName).findOne(toGet.content, (err, result) => {
-
 			if (err) { reject(err); }
 
 			resolve(result);
