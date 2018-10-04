@@ -47,7 +47,6 @@ const dbGetElem = function (db, toGet) {
 
 const dbPerfomQuerry = function (querry, toAdd) {
 	return new Promise((resolve, reject) => {
-
 		mongoClient.connect(dbUrl, { useNewUrlParser: true }, (err, client) => {
 
 			if (err) {
